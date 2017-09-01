@@ -1,19 +1,20 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import BlogCard from '../components/blog-card';
+import ProjectCard from '../components/project-card';
+
 const IndexPage = ({data}) => {
   const pages = data.allMarkdownRemark.edges.map((d) => {
     const front = d.node.frontmatter;
-    return (<div><Link to={front.path}>{front.title}</Link><br /></div>);
+    if(front.post_type == "Project") {
+      return <ProjectCard title={front.title} path={front.path} />
+    } else {
+      return <BlogCard title={front.title} path={front.path} />
+    }
   });
   return (
-    <div>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <Link to="/page-2/">Go to page 2</Link>
-      <div>{pages}</div>
-    </div>
+    <div>{pages}</div>
   );
 }
 
