@@ -5,8 +5,9 @@ function BlogCard(props) {
     return (
         <div>
             <h2>{props.title}</h2>
-            <div>File To: \Blog\</div>
-            <p>stuff stuff</p>
+            <em>{props.subtitle}</em>
+            <div>File To: \Blog\{props.folder}</div>
+            <p>{props.excerpt}</p>
             <Link to={props.path}>Read More</Link>
         </div>
     );

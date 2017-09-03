@@ -18,7 +18,7 @@ const IndexPage = ({data}) => {
   );
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const postQuery = graphql`
 query IndexQurey {
