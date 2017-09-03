@@ -1,8 +1,12 @@
 ---
 path: '/second-post'
 title: 'Second Blog Post'
-post_type: 'Blg'
+post_type: 1
 folder: 'fun'
+tags:
+  - C
+  - SEGFAULT
+  - Real Programming
 ---
 
 # This  title
