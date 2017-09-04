@@ -7,10 +7,11 @@ import ProjectCard from '../components/project-card';
 const IndexPage = ({data}) => {
   const pages = data.allMarkdownRemark.edges.map((d) => {
     const front = d.node.frontmatter;
+    const excerpt = d.node.excerpt;
     if(front.post_type == "Project") {
-      return <ProjectCard title={front.title} path={front.path} />
+      return <ProjectCard frontmatter={front} excerpt={excerpt} />
     } else {
-      return <BlogCard title={front.title} path={front.path} />
+      return <BlogCard frontmatter={front} excerpt={excerpt} />
     }
   });
   return (
@@ -28,7 +29,11 @@ query IndexQurey {
         id
         frontmatter {
           title
+          subtitle
           path
+          post_type
+          folder
+          tags
         }
       }
     }

@@ -7,7 +7,7 @@ const Blog = ({data}) => {
   const blogs = data.allMarkdownRemark.edges.map((d) => {
     const excerpt = d.node.excerpt;
     const front = d.node.frontmatter;
-    return <BlogCard title={front.title} subtitle={front.subtitle} excerpt={excerpt} path={front.path} folder={front.folder} />
+    return <BlogCard frontmatter={front} excerpt={excerpt} />
   });
   return (
     <div>{blogs}</div>

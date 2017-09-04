@@ -8,7 +8,7 @@ const Projects = ({data}) => {
   const projects = data.allMarkdownRemark.edges.map((d) => {
     const excerpt = d.node.excerpt;
     const front = d.node.frontmatter;
-    return <ProjectCard title={front.title} subtitle={front.subtitle} excerpt={excerpt} path={front.path} folder={front.folder} />
+    return <ProjectCard frontmatter={front} excerpt={excerpt} />
   });
   return (
     <div>{projects}</div>
