@@ -2,7 +2,7 @@
 path: '/third-post'
 title: 'A Blog Post'
 subtitle: 'The Dark Post Rises'
-post_type: 1
+post_type: 2
 category: 'Rant'
 folder: 'Movies'
 tags:

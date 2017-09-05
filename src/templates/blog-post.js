@@ -1,5 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import ReactDisqusThread from 'react-disqus-thread';
+
+/* <ReactDisqusThread
+				shortname="example"
+				identifier="something-unique-12345"
+				title="Example Thread"
+				url="http://www.example.com/example-thread"
+				category_id="123456"
+				onNewComment={this.handleNewComment}/> */
 
 // strip data off of the object the callee passes in
 export default function Template({data}) {
