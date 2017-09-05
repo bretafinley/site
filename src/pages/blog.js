@@ -26,7 +26,7 @@ query BlogIndexQuery {
     edges {
       node {
         id
-        excerpt
+        excerpt(pruneLength: 250)
         frontmatter {
           title
           subtitle

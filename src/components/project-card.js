@@ -5,7 +5,7 @@ function ProjectCard(props) {
     const {title, subtitle, folder, path, tags } = props.frontmatter;
     const renderedTags = handleTags(tags);
     return (
-        <div>
+        <div className="card">
             <h2>{title}</h2>
             <em>{subtitle}</em>
             <div>File To: \Blog\{folder}</div>

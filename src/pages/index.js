@@ -27,6 +27,7 @@ query IndexQurey {
     edges {
       node {
         id
+        excerpt(pruneLength: 250)
         frontmatter {
           title
           subtitle
