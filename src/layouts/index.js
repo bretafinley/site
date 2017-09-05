@@ -5,51 +5,48 @@ import Helmet from 'react-helmet'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import './theme.css'
+import './style.css'
 
 const Header = () => {
   return (
-    <nav classNameName="navbar navbar-default">
-    <div classNameName="container-fluid">
+    <div className="container">
+    <nav className="navbar" role="navigation">
       <div className="navbar-header">
-        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span className="sr-only">Toggle navigation</span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <Link className="navbar-brand" to="/">Bret Finley</Link>
       </div>
-      <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <div className="collapse navbar-collapse navbar-ex1-collapse">
         <ul className="nav navbar-nav">
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/about">About</Link></li>
         </ul>
       </div>
+    </nav>
     </div>
-  </nav>
   );
 }
 
 const TemplateWrapper = ({ children }) =>
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Ghosts and Glass"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
+    
+    <div>
     <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className="container">
       {children()}
+    </div>
     </div>
   </div>
 
