@@ -32,6 +32,7 @@ query IndexQurey {
           subtitle
           path
           post_type
+          category
           folder
           tags
         }

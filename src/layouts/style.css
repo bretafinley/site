@@ -60,10 +60,3 @@ ol.breadcrumb {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-.card:hover {
-    color: #fff;
-    background-color: rgb(69, 130, 236);
-    cursor: pointer;
-    border: 3px double #fff;
-}

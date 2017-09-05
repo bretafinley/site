@@ -32,6 +32,7 @@ query BlogIndexQuery {
           subtitle
           path
           post_type
+          category
           folder
           tags
         }

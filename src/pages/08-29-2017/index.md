@@ -3,7 +3,8 @@ path: '/second-post'
 title: 'Second Blog Post'
 subtitle: 'Electric Boogaloo'
 post_type: 1
-folder: 'fun'
+category: 'Reviews'
+folder: 'Languages'
 tags:
   - C
   - SEGFAULT

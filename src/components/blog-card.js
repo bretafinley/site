@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import Tag from './tag';
 
 function BlogCard(props) {
-    const {title, subtitle, folder, path, tags } = props.frontmatter;
+    const {title, subtitle, category, folder, path, tags } = props.frontmatter;
     const renderedTags = handleTags(tags);
     return (
         <div className="card">
@@ -13,6 +13,7 @@ function BlogCard(props) {
             <span className="folder-title">DIR: </span>
             <ol className="breadcrumb">
                 <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/">{category}</Link></li>
                 <li class="active"><Link to={folder}>{folder}</Link></li>
             </ol>
             <div><span className="tag-title">TAGS: </span>{renderedTags}</div>
