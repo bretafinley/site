@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link'
 
-import Tag from './tag';
+import Tag from '../tag';
 
 function BlogCard(props) {
     const {title, subtitle, category, folder, path, tags } = props.frontmatter;

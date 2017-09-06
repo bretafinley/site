@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import BlogCard from '../components/blog-card';
-import ProjectCard from '../components/project-card';
+import BlogCard from '../components/cards/blog-card';
+import ProjectCard from '../components/cards/project-card';
 
 const IndexPage = ({data}) => {
   const pages = data.allMarkdownRemark.edges.map((d) => {

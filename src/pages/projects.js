@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import ProjectCard from '../components/project-card';
+import ProjectCard from '../components/cards/project-card';
 
 const Projects = ({data}) => {
   console.log(data)

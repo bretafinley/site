@@ -10,8 +10,8 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     const { createPage } = boundActionCreators;
 
     const templates = {
-        "1": path.resolve('src/templates/blog-post.js'),
-        "2": path.resolve('src/templates/project-post.js')
+        "1": path.resolve('src/templates/posts/blog-post.js'),
+        "2": path.resolve('src/templates/posts/project-post.js')
     };
 
     // remark generates the id for us
@@ -61,7 +61,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             const location = `/category/${resolvedCat}`;
             createPage({
                 path: location,
-                component: path.resolve('src/templates/category.js'),
+                component: path.resolve('src/templates/indexes/category-index.js'),
                 context: {
                     category: cat
                 }
@@ -74,7 +74,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             const location = `/folder/${resolvedFolder}`;
             createPage({
                 path: location,
-                component: path.resolve('src/templates/folder.js'),
+                component: path.resolve('src/templates/indexes/folder-index.js'),
                 context: {
                     category: level1,
                     folder: level2
@@ -87,7 +87,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             const location = `/tag/${resolvedTag}`;
             createPage({
                 path: location,
-                component: path.resolve('src/templates/tag.js'),
+                component: path.resolve('src/templates/indexes/tag-index.js'),
                 context: {
                     tag: tag
                 }

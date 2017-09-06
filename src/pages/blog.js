@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import BlogCard from '../components/blog-card';
+import BlogCard from '../components/cards/blog-card';
 
 const Blog = ({data}) => {
   const blogs = data.allMarkdownRemark.edges.map((d) => {
