@@ -6,7 +6,7 @@ post_type: 1
 category: 'Editorials'
 folder: 'Development'
 tags:
-  - Web
+  - Code
   - JavaScript
   - Flame war
 ---

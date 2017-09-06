@@ -6,7 +6,7 @@ post_type: 1
 category: 'Rant'
 folder: 'Languages'
 tags:
-  - C
+  - Code
   - SEGFAULT
   - Real Programming
 ---

@@ -13,8 +13,8 @@ function BlogCard(props) {
             <span className="folder-title">DIR: </span>
             <ol className="breadcrumb">
                 <li><Link to="/blog">Blog</Link></li>
-                <li><Link to="/">{category}</Link></li>
-                <li class="active"><Link to={folder}>{folder}</Link></li>
+                <li><Link to={`/category/${category}`}>{category}</Link></li>
+                <li class="active"><Link to={`/folder/${category}/${folder}`}>{folder}</Link></li>
             </ol><br />
             <span className="tag-title">TAGS: </span>{renderedTags}<br />
             <span>DATE: </span>2017-09-05
@@ -30,7 +30,7 @@ function BlogCard(props) {
 function handleTags(tags) {
     return tags.map((tag) => {
         return (
-            <Tag text={tag+";"} />
+            <Tag text={tag} />
         );
     });
 }
