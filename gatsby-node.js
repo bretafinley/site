@@ -1,6 +1,10 @@
 const path = require('path');
 const _ = require('lodash');
 
+function resolveStringToLocation(str) {
+    return str.replace(/\s+/g, '-').toLowerCase();
+}
+
 exports.createPages = ({boundActionCreators, graphql}) => {
     // createPage is a property of boundActionCreators
     const { createPage } = boundActionCreators;
@@ -53,15 +57,30 @@ exports.createPages = ({boundActionCreators, graphql}) => {
         tags = _.uniq(tags);
 
         categories.forEach((cat)=>{
-
+            cat = resolveStringToLocation(cat);
+            const location = `/category/${cat}`;
+            createPage({
+                path: location,
+                component: path.resolve('src/templates/foo-page.js')
+            });
         });
 
         folders.forEach((folder)=>{
-
+            folder = resolveStringToLocation(folder);
+            const location = `/folder/${folder}`;
+            createPage({
+                path: location,
+                component: path.resolve('src/templates/foo-page.js')
+            });
         });
 
         tags.forEach((tag)=>{
-
+            tag = resolveStringToLocation(tag);
+            const location = `/tag/${tag}`;
+            createPage({
+                path: location,
+                component: path.resolve('src/templates/foo-page.js')
+            });
         });
     })
 }

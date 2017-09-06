@@ -10,7 +10,11 @@ const Blog = ({data}) => {
     return <BlogCard frontmatter={front} excerpt={excerpt} />
   });
   return (
-    <div>{blogs}</div>
+    <div>
+      <div className="col-md-2"></div>
+      <div className="col-md-8">{blogs}</div>
+      <div className="col-md-2"></div>
+    </div>
   );
 };
 

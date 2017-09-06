@@ -63,6 +63,7 @@ ol.breadcrumb {
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    max-width: 700px;
 }
 
 .card h3 {

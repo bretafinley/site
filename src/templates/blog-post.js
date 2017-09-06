@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import ReactDisqusThread from 'react-disqus-thread';
 
 /* <ReactDisqusThread
 				shortname="example"

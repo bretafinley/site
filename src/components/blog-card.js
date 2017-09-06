@@ -15,8 +15,8 @@ function BlogCard(props) {
                 <li><Link to="/blog">Blog</Link></li>
                 <li><Link to="/">{category}</Link></li>
                 <li class="active"><Link to={folder}>{folder}</Link></li>
-            </ol>
-            <span className="tag-title">TAGS: </span>{renderedTags}
+            </ol><br />
+            <span className="tag-title">TAGS: </span>{renderedTags}<br />
             <span>DATE: </span>2017-09-05
             <hr />
             <blockquote>
