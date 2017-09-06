@@ -8,7 +8,7 @@ const IndexPage = ({data}) => {
   const pages = data.allMarkdownRemark.edges.map((d) => {
     const front = d.node.frontmatter;
     const excerpt = d.node.excerpt;
-    if(front.post_type == "Project") {
+    if(front.post_type == 2) {
       return <ProjectCard frontmatter={front} excerpt={excerpt} />
     } else {
       return <BlogCard frontmatter={front} excerpt={excerpt} />

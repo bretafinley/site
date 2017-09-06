@@ -57,29 +57,40 @@ exports.createPages = ({boundActionCreators, graphql}) => {
         tags = _.uniq(tags);
 
         categories.forEach((cat)=>{
-            cat = resolveStringToLocation(cat);
-            const location = `/category/${cat}`;
+            const resolvedCat = resolveStringToLocation(cat);
+            const location = `/category/${resolvedCat}`;
             createPage({
                 path: location,
-                component: path.resolve('src/templates/foo-page.js')
+                component: path.resolve('src/templates/category.js'),
+                context: {
+                    category: cat
+                }
             });
         });
 
         folders.forEach((folder)=>{
-            folder = resolveStringToLocation(folder);
-            const location = `/folder/${folder}`;
+            const [ level1, level2 ] = folder.split("/");
+            const resolvedFolder = resolveStringToLocation(folder);
+            const location = `/folder/${resolvedFolder}`;
             createPage({
                 path: location,
-                component: path.resolve('src/templates/foo-page.js')
+                component: path.resolve('src/templates/folder.js'),
+                context: {
+                    category: level1,
+                    folder: level2
+                }
             });
         });
 
         tags.forEach((tag)=>{
-            tag = resolveStringToLocation(tag);
-            const location = `/tag/${tag}`;
+            const resolvedTag = resolveStringToLocation(tag);
+            const location = `/tag/${resolvedTag}`;
             createPage({
                 path: location,
-                component: path.resolve('src/templates/foo-page.js')
+                component: path.resolve('src/templates/tag.js'),
+                context: {
+                    tag: tag
+                }
             });
         });
     })

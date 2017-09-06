@@ -3,7 +3,7 @@ path: '/second-post'
 title: 'Second Blog Post'
 subtitle: 'Electric Boogaloo'
 post_type: 1
-category: 'Reviews'
+category: 'Rant'
 folder: 'Languages'
 tags:
   - C
