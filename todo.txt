@@ -5,3 +5,5 @@ think about adding "link" metadata to posts, this could be used for movie links,
 add component for comments
 add content to about page
 clean up css and add preprocessor
+make "recent posts" cards that have a bit more information
+add on hover style for side list items, maybe invert the color scheme

@@ -14,7 +14,7 @@ function SideCard(props) {
             <h5>Folders</h5>
             <div className="list-group">
                 <a className="list-group-item" href="#">Movies/Horror</a>
-                <a className="list-group-item" href="#">Development/Web</a>
+                <a className="list-group-item" href="#">Dev/Web</a>
                 <a className="list-group-item" href="#">Reviews/Good</a>
             </div>
             <h5>Tags</h5>
