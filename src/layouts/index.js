@@ -6,7 +6,6 @@ import Helmet from 'react-helmet'
 import MeCard from '../components/cards/me-card';
 import SideCard from '../components/cards/side-card';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
-import '../../node_modules/ionicons/dist/css/ionicons.css'
 import './theme.css'
 import './style.css'
 
