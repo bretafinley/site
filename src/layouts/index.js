@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import MeCard from '../components/cards/me-card';
+import SideCard from '../components/cards/side-card';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../../node_modules/ionicons/dist/css/ionicons.css'
 import './theme.css'
 import './style.css'
 
@@ -18,10 +21,12 @@ const Header = () => {
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
+        <Link className="navbar-brand" to="/">Ghosts and Glass</Link>
       </div>
 
       <div className="collapse navbar-collapse navbar-ex1-collapse">
         <ul className="nav navbar-nav">
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/about">About</Link></li>
@@ -45,7 +50,15 @@ const TemplateWrapper = ({ children }) =>
     <div>
     <Header />
     <div className="container">
+      <div className="col-md-2">
+        <MeCard />
+      </div>
+      <div className="col-md-8">
       {children()}
+      </div>
+      <div className="col-md-2">
+        <SideCard />
+      </div>
     </div>
     </div>
   </div>

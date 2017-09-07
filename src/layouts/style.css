@@ -2,13 +2,26 @@ hr {
     border-color: rgb(69, 130, 236);
 }
 
-.navbar .navbar-nav {
+/* .navbar .navbar-nav {
     display: inline-block;
     float: none;
 }
 
 .navbar .navbar-collapse {
     text-align: center;
+} */
+
+.me {
+    border: 1px solid rgb(69, 130, 236);
+    text-align: center;
+}
+
+.side-index {
+    border: 1px solid rgb(69, 130, 236);
+}
+
+.navbar {
+    border-bottom: 1px solid rgb(69, 130, 236);
 }
 
 .breadcrumb {

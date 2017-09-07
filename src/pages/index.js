@@ -3,15 +3,19 @@ import Link from 'gatsby-link'
 
 import BlogCard from '../components/cards/blog-card';
 import ProjectCard from '../components/cards/project-card';
+import * as constants from '../util/constants';
 
 const IndexPage = ({data}) => {
   const pages = data.allMarkdownRemark.edges.map((d) => {
     const front = d.node.frontmatter;
     const excerpt = d.node.excerpt;
-    if(front.post_type == 2) {
-      return <ProjectCard frontmatter={front} excerpt={excerpt} />
-    } else {
-      return <BlogCard frontmatter={front} excerpt={excerpt} />
+    switch(front.post_type) {
+      case constants.BLOG_TYPE:
+        return <BlogCard frontmatter={front} excerpt={excerpt} />
+      case constants.PROJECT_TYPE:
+        return <ProjectCard frontmatter={front} excerpt={excerpt} />
+      default:
+        return <div>NO CARD</div>
     }
   });
   return (

@@ -15,7 +15,6 @@ export default function TemplateDefault(props) {
                 return <BlogCard frontmatter={front} excerpt={excerpt} />
             case constants.PROJECT_TYPE:
                 return <ProjectCard frontmatter={front} excerpt={excerpt} />
-                break;
             default:
                 return <div>NO CARD</div>
         }
@@ -23,9 +22,7 @@ export default function TemplateDefault(props) {
 
     return (
         <div>
-            <div className="col-md-2"></div>
-            <div className="col-md-8">{pages}</div>
-            <div className="col-md-2"></div>
+            <div className="col-md-12">{pages}</div>
         </div>
     );
 }
