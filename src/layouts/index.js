@@ -11,6 +11,7 @@ import './style.css'
 
 const Header = () => {
   return (
+    <div className="nav-parent">
     <div className="container">
     <nav className="navbar" role="navigation">
       <div className="navbar-header">
@@ -32,6 +33,7 @@ const Header = () => {
         </ul>
       </div>
     </nav>
+    </div>
     </div>
   );
 }

@@ -2,30 +2,32 @@ hr {
     border-color: rgb(69, 130, 236);
 }
 
-/* .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
+body {
+    background-color: #F5F8F9;
 }
 
-.navbar .navbar-collapse {
-    text-align: center;
-} */
-
-.social:hover {
-    border: 1px solid rgb(69, 130, 236);
+.nav-parent {
+    background-color: #fff;
+    border-bottom: 2px solid rgb(69, 130, 236);
+    margin-bottom: 35px;
 }
 
 .me {
-    border: 1px solid rgb(69, 130, 236);
+    /* border: 1px solid rgb(69, 130, 236); */
     text-align: center;
+    background-color: #fff;
+}
+
+.me h4 {
+    margin-top: 0px;
 }
 
 .side-index {
-    border: 1px solid rgb(69, 130, 236);
+    /* border: 1px solid rgb(69, 130, 236); */
 }
 
 .navbar {
-    border-bottom: 1px solid rgb(69, 130, 236);
+    background-color: #fff;
 }
 
 .breadcrumb {
@@ -76,11 +78,10 @@ ol.breadcrumb {
 }
 
 .card {
-    border: 3px solid rgb(69, 130, 236);
     padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     max-width: 700px;
+    background-color: #fff;
 }
 
 .card h3 {

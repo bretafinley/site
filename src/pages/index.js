@@ -19,7 +19,7 @@ const IndexPage = ({data}) => {
     }
   });
   return (
-    <div>{pages}</div>
+    <div className="col-md-12">{pages}</div>
   );
 }
 

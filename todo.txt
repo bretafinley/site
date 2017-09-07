@@ -2,3 +2,6 @@ me-card still needs work and an image
 need to pull in data to side index
 think about adding "image" metadata to posts, could use this for a time-line style header or something
 think about adding "link" metadata to posts, this could be used for movie links, but mostly for github repos
+add component for comments
+add content to about page
+clean up css and add preprocessor
