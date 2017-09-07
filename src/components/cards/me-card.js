@@ -5,6 +5,8 @@ function MeCard(props) {
     return (
         <div className="me">
             <h4>Bret Finley</h4>
+            <div><em>Developer, Human</em></div>
+            <div>Boise, Idaho</div>
             <div className="btn-group" role="group">
                 <a className="btn" href="mailto:bretafinley@gmail.com"><Ionicon icon="ion-email" fontSize="35px" color="rgb(69, 130, 236)" /></a>
             </div>

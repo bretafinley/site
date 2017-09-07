@@ -23,6 +23,12 @@ function SideCard(props) {
                 <a className="list-group-item" href="#">JavaScript</a>
                 <a className="list-group-item" href="#">React</a>
             </div>
+            <h5>Recent Posts</h5>
+            <div className="list-group">
+                <a className="list-group-item" href="#">The Dark Knight Review</a>
+                <a className="list-group-item" href="#">Why R Developers Can't Get Dates</a>
+                <a className="list-group-item" href="#">React Reactions</a>
+            </div>
         </div>
     );
 }
