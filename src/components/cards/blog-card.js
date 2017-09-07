@@ -22,7 +22,7 @@ function BlogCard(props) {
             <blockquote>
                 <p className="card-excerpt">{props.excerpt}</p>
             </blockquote>
-            <button className="btn btn-default"><Link to={path}>READ MORE</Link></button>
+            <Link className="btn btn-default" to={path}>READ MORE</Link>
         </div>
     );
 }
