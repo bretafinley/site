@@ -3,25 +3,23 @@ import React from 'react';
 import {getUniqueIdentifiers} from '../../util/utilities';
 
 function SideCard(props) {
+    console.log(props)
+    const renderedCategories = handleArray(props.categories);
+    const renderedFolders = handleArray(props.folders);
+    const renderedTags = handleArray(props.tags);
     return (
         <div className="side-index">
             <h5>Categories</h5>
             <div className="list-group">
-                <a className="list-group-item" href="#">Movies</a>
-                <a className="list-group-item" href="#">Development</a>
-                <a className="list-group-item" href="#">Reviews</a>
+                {renderedCategories}
             </div>
             <h5>Folders</h5>
             <div className="list-group">
-                <a className="list-group-item" href="#">Movies/Horror</a>
-                <a className="list-group-item" href="#">Dev/Web</a>
-                <a className="list-group-item" href="#">Reviews/Good</a>
+                {renderedFolders}
             </div>
             <h5>Tags</h5>
             <div className="list-group">
-                <a className="list-group-item" href="#">C</a>
-                <a className="list-group-item" href="#">JavaScript</a>
-                <a className="list-group-item" href="#">React</a>
+                {renderedTags}
             </div>
             <h5>Recent Posts</h5>
             <div className="list-group">
@@ -33,6 +31,12 @@ function SideCard(props) {
     );
 }
 
-export default SideCard;
+function handleArray(arr) {
+    return arr.map((d)=>{
+        console.log(d)
+        return <a className="list-group-item" href="#">{d}</a>
+    });
+}
 
+export default SideCard;
 

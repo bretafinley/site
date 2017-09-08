@@ -18,7 +18,7 @@ function BlogCard(props) {
                 <ol className="breadcrumb">
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to={`/category/${category}`}>{category}</Link></li>
-                    <li class="active"><Link to={`/folder/${category}/${folder}`}>{folder}</Link></li>
+                    <li className="active"><Link to={`/folder/${category}/${folder}`}>{folder}</Link></li>
                 </ol>
             </span>
         </div>

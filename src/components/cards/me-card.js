@@ -7,7 +7,7 @@ function MeCard(props) {
     return (
         <div className="me">
             <h4>Bret Finley</h4>
-            <img src={PROFILE_LINK} alt="..." class="img-circle" />
+            <img src={PROFILE_LINK} alt="..." className="img-circle" />
             <div><em>Developer, Human</em></div>
             <div>Boise, Idaho</div>
             <div className="btn-group" role="group">
