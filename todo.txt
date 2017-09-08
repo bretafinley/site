@@ -1,11 +1,3 @@
-think about combining categories and folders to avoid redundant information
-    Rant
-        Movies
-        Programming
-        Books
-    Reviews
-        Movies
-        ...
 think about adding "image" metadata to posts, could use this for a time-line style header or something
     images are handled really strangely in gatsby
 think about adding "link" metadata to posts, this could be used for movie links, but mostly for github repos
@@ -15,3 +7,4 @@ clean up css and add preprocessor
 make "recent posts" cards that have a bit more information
 add on hover style for side list items, maybe invert the color scheme
 clean up sidecard, it's too closely coupled with the tags and categories stuff
+add overflow to side categories and tags

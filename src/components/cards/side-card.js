@@ -1,23 +1,24 @@
 import React from 'react';
+import {FaTag, FaFolder} from 'react-icons/lib/fa';
 
 import {getUniqueIdentifiers} from '../../util/utilities';
+import SideCategory from '../side-category';
 
 function SideCard(props) {
-    console.log(props)
     const renderedCategories = handleArray(props.categories);
-    const renderedFolders = handleArray(props.folders);
+    const processedFolders = processFolders(props.folders);
+    console.log(processedFolders)
+    const foo = renderFolders(processedFolders);
+    console.log(foo)
     const renderedTags = handleArray(props.tags);
+    processFolders(props.folders)
     return (
         <div className="side-index">
-            <h5>Categories</h5>
-            <div className="list-group">
-                {renderedCategories}
+            <div>
+            <h5><FaFolder /> Folders</h5>
+            {foo}
             </div>
-            <h5>Folders</h5>
-            <div className="list-group">
-                {renderedFolders}
-            </div>
-            <h5>Tags</h5>
+            <h5><FaTag /> Tags</h5>
             <div className="list-group">
                 {renderedTags}
             </div>
@@ -33,9 +34,31 @@ function SideCard(props) {
 
 function handleArray(arr) {
     return arr.map((d)=>{
-        console.log(d)
         return <a className="list-group-item" href="#">{d}</a>
     });
+}
+
+function processFolders(folders) {
+    let category_folders = {};
+    folders.forEach((folder) => {
+        let levels = folder.split("/");
+        if(!category_folders[levels[0]]) {
+            category_folders[levels[0]] = [];
+        }
+
+        category_folders[levels[0]].push(levels[1]);
+    });
+
+    return category_folders;
+}
+
+function renderFolders(processedFolders) {
+    let cats = [];
+    for(let key in processedFolders) {
+        cats.push(<SideCategory category={key} folders={processedFolders[key]} />);
+    }
+
+    return cats;
 }
 
 export default SideCard;
