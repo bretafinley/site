@@ -5,19 +5,13 @@ import {getUniqueIdentifiers} from '../../util/utilities';
 import SideCategory from '../side-category';
 
 function SideCard(props) {
-    const renderedCategories = handleArray(props.categories);
-    const processedFolders = processFolders(props.folders);
-    console.log(processedFolders)
-    const foo = renderFolders(processedFolders);
-    console.log(foo)
-    const renderedTags = handleArray(props.tags);
-    processFolders(props.folders)
+    const renderedFolders = handleFolders(props.folders);
+    const renderedTags = handleTags(props.tags);
+
     return (
         <div className="side-index">
-            <div>
             <h5><FaFolder /> Folders</h5>
-            {foo}
-            </div>
+            {renderedFolders}
             <h5><FaTag /> Tags</h5>
             <div className="list-group">
                 {renderedTags}
@@ -32,13 +26,13 @@ function SideCard(props) {
     );
 }
 
-function handleArray(arr) {
+function handleTags(arr) {
     return arr.map((d)=>{
         return <a className="list-group-item" href="#">{d}</a>
     });
 }
 
-function processFolders(folders) {
+function handleFolders(folders) {
     let category_folders = {};
     folders.forEach((folder) => {
         let levels = folder.split("/");
@@ -49,16 +43,12 @@ function processFolders(folders) {
         category_folders[levels[0]].push(levels[1]);
     });
 
-    return category_folders;
-}
-
-function renderFolders(processedFolders) {
-    let cats = [];
-    for(let key in processedFolders) {
-        cats.push(<SideCategory category={key} folders={processedFolders[key]} />);
+    let rendered = [];
+    for(let key in category_folders) {
+        rendered.push(<SideCategory category={key} folders={category_folders[key]} />);
     }
 
-    return cats;
+    return rendered;
 }
 
 export default SideCard;

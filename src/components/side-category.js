@@ -7,7 +7,7 @@ function SideCategory(props) {
     return (
         <div>
             <div className="list-group">
-                <a className="list-group-item side-category" href={`/category/${props.category}`}>{props.category}\</a>
+                <a className="list-group-item" href={`/category/${props.category}`}>{props.category}\</a>
                 {renderedFolders}
             </div>
         </div>
