@@ -32,6 +32,7 @@ query ProjectIndexQuery {
           subtitle
           path
           post_type
+          category
           folder
           tags
         }

@@ -10,9 +10,4 @@ function Tag(props) {
     );
 }
 
-// make this a utility function
-// function resolveStringToLocation(str) {
-//     return str.replace(/\s+/g, '-').toLowerCase();
-// }
-
 export default Tag;

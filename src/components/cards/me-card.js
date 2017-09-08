@@ -1,22 +1,25 @@
 import React from 'react';
-import Ionicon from 'react-ionicons';
+import {FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaFacebook} from 'react-icons/lib/fa';
+
+import {PROFILE_LINK, EMAIL_LINK, LINKEDIN_LINK, GITHUB_LINK, TWITTER_LINK, FACEBOOK_LINK} from '../../util/constants';
 
 function MeCard(props) {
     return (
         <div className="me">
             <h4>Bret Finley</h4>
+            <img src={PROFILE_LINK} alt="..." class="img-circle" />
             <div><em>Developer, Human</em></div>
             <div>Boise, Idaho</div>
             <div className="btn-group" role="group">
-                <a className="btn" href="mailto:bretafinley@gmail.com"><Ionicon icon="ion-email" fontSize="35px" color="rgb(69, 130, 236)" /></a>
+                <a className="btn" href={EMAIL_LINK} target="_blank"><FaEnvelope /></a>
             </div>
             <div className="btn-group" role="group">
-                <a className="btn" href="#"><Ionicon icon="ion-social-linkedin" fontSize="35px" color="rgb(69, 130, 236)" /></a>
-                <a className="btn" href="https://github.com/bretafinley"><Ionicon icon="ion-social-github" fontSize="35px" color="rgb(69, 130, 236)" /></a>
+                <a className="btn" href={LINKEDIN_LINK} target="_blank"><FaLinkedin /></a>
+                <a className="btn" href={GITHUB_LINK} target="_blank"><FaGithub /></a>
             </div>
             <div className="btn-group" role="group">
-                <a className="btn" href="#"><Ionicon icon="ion-social-twitter" fontSize="35px" color="rgb(69, 130, 236)" /></a>
-                <a className="btn" href="#"><Ionicon icon="ion-social-facebook" fontSize="35px" color="rgb(69, 130, 236)" /></a>
+                <a className="btn" href={TWITTER_LINK} target="_blank"><FaTwitter /></a>
+                <a className="btn" href={FACEBOOK_LINK} target="_blank"><FaFacebook /></a>
             </div>
         </div>
     );

@@ -7,8 +7,10 @@ category: 'Editorials'
 folder: 'Development'
 tags:
   - Code
+  - Foo
+  - Bar
+  - Baz
   - JavaScript
-  - Flame war
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac nulla euismod, faucibus tortor in, tincidunt ante. Maecenas quam neque, molestie ac dictum in, ultricies vel sem. Integer volutpat magna enim, et ornare est pellentesque ut. Quisque ut ligula consequat, varius ex ut, faucibus mauris. Sed nec libero efficitur, venenatis lorem vitae, hendrerit nisi. Maecenas interdum pretium felis, eu dignissim mi mollis sed. Aliquam euismod sodales enim quis tincidunt. Sed auctor consequat iaculis. Aenean pharetra semper massa id vestibulum. Mauris justo lorem, rhoncus sit amet mauris et, efficitur blandit neque. Morbi pharetra ex a vehicula cursus.

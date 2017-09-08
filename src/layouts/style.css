@@ -16,10 +16,15 @@ body {
     /* border: 1px solid rgb(69, 130, 236); */
     text-align: center;
     background-color: #fff;
+    padding: 5px;
 }
 
 .me h4 {
     margin-top: 0px;
+}
+
+.me a {
+    font-size: 35px;
 }
 
 .side-index {
@@ -70,12 +75,16 @@ ol.breadcrumb {
     filter: brightness(85%);
 }
 
-.tag-title {
+.card-attr {
     font-family: Courier New, Courier, monospace;
 }
 
-.folder-title {
-    font-family: Courier New, Courier, monospace;
+.card-attr-name {
+    padding-left: 0px;
+}
+
+.card-attr-icon {
+    padding-right: 0px;
 }
 
 .card {
@@ -86,5 +95,5 @@ ol.breadcrumb {
 }
 
 .card h3 {
-    margin-top: 10px;
+    margin-top: 0px;
 }

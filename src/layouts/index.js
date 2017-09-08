@@ -51,10 +51,10 @@ const TemplateWrapper = ({ children }) =>
     <div>
     <Header />
     <div className="container">
-      <div className="col-md-2">
+      <div className="col-md-3">
         <MeCard />
       </div>
-      <div className="col-md-8">
+      <div className="col-md-7">
       {children()}
       </div>
       <div className="col-md-2">
