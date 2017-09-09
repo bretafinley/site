@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import {FaFolder, FaTag, FaGit, FaCalendar} from 'react-icons/lib/fa';
+import {FaFolder, FaTag, FaGithub, FaCalendar} from 'react-icons/lib/fa';
 
 import Tag from '../tag';
 
@@ -28,7 +28,7 @@ function ProjectCard(props) {
                 <span className="card-attr col-md-10">{renderedTags}</span>
             </div>
             <div className="row">
-                <span className="card-attr attr-icon col-md-1"><FaGit /></span>
+                <span className="card-attr attr-icon col-md-1"><FaGithub /></span>
                 <span className="card-attr card-attr-name col-md-1">REPO:</span>
                 <span className="card-attr col-md-10"><a href="#">/site</a></span>
             </div>

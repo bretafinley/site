@@ -10,17 +10,11 @@ function SideCard(props) {
 
     return (
         <div className="side-index">
-            <h5><FaFolder /> Folders</h5>
+            <h5 id="folders-header"><FaFolder /> Folders</h5>
             {renderedFolders}
             <h5><FaTag /> Tags</h5>
             <div className="list-group">
                 {renderedTags}
-            </div>
-            <h5>Recent Posts</h5>
-            <div className="list-group">
-                <a className="list-group-item" href="#">The Dark Knight Review</a>
-                <a className="list-group-item" href="#">Why R Developers Can't Get Dates</a>
-                <a className="list-group-item" href="#">React Reactions</a>
             </div>
         </div>
     );
@@ -28,7 +22,7 @@ function SideCard(props) {
 
 function handleTags(arr) {
     return arr.map((d)=>{
-        return <a className="list-group-item" href="#">{d}</a>
+        return <a className="list-group-item" href={`/tag/${d}`}>{d}</a>
     });
 }
 

@@ -30,14 +30,18 @@ body {
 .side-index {
     /* border: 1px solid rgb(69, 130, 236); */
     font-family: Courier New, Courier, monospace !important;
+    background-color: #fff;
+    padding: 10px;
 }
 
 .side-index a.list-group-item {
     color: rgb(69, 130, 236) !important;
+    border: 0;
     display: block;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    padding: 0px;
 }
 
 .navbar {
@@ -60,6 +64,10 @@ ol.breadcrumb {
 
 .card-excerpt {
     font-size: 18px;
+}
+
+#folders-header {
+    margin-top: 0px;
 }
 
 .tag {
