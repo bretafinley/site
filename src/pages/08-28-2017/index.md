@@ -3,6 +3,7 @@ path: '/first-post'
 title: 'First Blog Post'
 subtitle: 'A Long Way From Home'
 post_type: 1
+post_date: 2017-09-05
 category: 'Editorials'
 folder: 'Development'
 tags:

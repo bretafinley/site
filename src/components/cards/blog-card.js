@@ -1,12 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link'
 import {FaFolder, FaTag, FaGit, FaCalendar} from 'react-icons/lib/fa';
+import moment from 'moment';
 
 import Tag from '../tag';
 
 function BlogCard(props) {
-    const {title, subtitle, category, folder, path, tags } = props.frontmatter;
+    const {title, subtitle, post_date, category, folder, path, tags } = props.frontmatter;
     const renderedTags = handleTags(tags);
+    const formattedDate = moment(post_date, "YYYYMMDD").format('l');
     return (
         <div className="card">
             <h3>{title}</h3>
@@ -30,7 +32,7 @@ function BlogCard(props) {
         <div className="row">
             <span className="card-attr attr-icon col-md-1"><FaCalendar /></span>
             <span className="card-attr card-attr-name col-md-1">DATE:</span>
-            <span className="card-attr col-md-10">2017-09-05</span>
+            <span className="card-attr col-md-10">{formattedDate}</span>
         </div>
             <hr />
             <blockquote>

@@ -1,12 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import {FaFolder, FaTag, FaGithub, FaCalendar} from 'react-icons/lib/fa';
+import moment from 'moment';
 
 import Tag from '../tag';
 
 function ProjectCard(props) {
-    const {title, subtitle, category, folder, path, tags } = props.frontmatter;
+    const {title, subtitle, post_date, category, folder, path, tags } = props.frontmatter;
     const renderedTags = handleTags(tags);
+    const formattedDate = moment(post_date, "YYYYMMDD").format('l');
     return (
         <div className="card">
             <h3>{title}</h3>

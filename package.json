@@ -12,6 +12,7 @@
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-remark": "^1.7.7",
     "lodash": "^4.17.4",
+    "moment": "^2.18.1",
     "react-disqus-thread": "^0.4.0",
     "react-icons": "^2.2.5"
   },
