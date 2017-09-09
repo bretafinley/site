@@ -37,6 +37,7 @@ query IndexQurey {
           subtitle
           path
           post_type
+          subject_url
           post_date
           category
           folder

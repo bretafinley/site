@@ -6,9 +6,10 @@ import moment from 'moment';
 import Tag from '../tag';
 
 function ProjectCard(props) {
-    const {title, subtitle, post_date, category, folder, path, tags } = props.frontmatter;
+    const {title, subtitle, post_date, subject_url, category, folder, path, tags } = props.frontmatter;
     const renderedTags = handleTags(tags);
     const formattedDate = moment(post_date, "YYYYMMDD").format('l');
+    const shortRepo = stripRepo(subject_url);
     return (
         <div className="card">
             <h3>{title}</h3>
@@ -32,7 +33,7 @@ function ProjectCard(props) {
             <div className="row">
                 <span className="card-attr attr-icon col-md-1"><FaGithub /></span>
                 <span className="card-attr card-attr-name col-md-1">REPO:</span>
-                <span className="card-attr col-md-10"><a href="#">/site</a></span>
+                <span className="card-attr col-md-10"><a href={subject_url}>/{shortRepo}</a></span>
             </div>
             <div className="row">
                 <span className="card-attr attr-icon col-md-1"><FaCalendar /></span>
@@ -54,6 +55,11 @@ function handleTags(tags) {
             <Tag text={tag} />
         );
     });
+}
+
+function stripRepo(repoURL) {
+    const parts = repoURL.split("/");
+    return parts.slice(-1)[0]; 
 }
 
 export default ProjectCard;
