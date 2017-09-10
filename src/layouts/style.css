@@ -44,6 +44,11 @@ body {
     padding: 0px;
 }
 
+.side-index a.list-group-item:hover {
+    color: #fff !important;
+    background-color: rgb(69, 130, 236) !important;
+}
+
 .navbar {
     background-color: #fff;
 }
