@@ -13,7 +13,6 @@ body {
 }
 
 .me {
-    /* border: 1px solid rgb(69, 130, 236); */
     text-align: center;
     background-color: #fff;
     padding: 5px;
@@ -28,7 +27,6 @@ body {
 }
 
 .side-index {
-    /* border: 1px solid rgb(69, 130, 236); */
     font-family: Courier New, Courier, monospace !important;
     background-color: #fff;
     padding: 10px;
@@ -120,8 +118,18 @@ ol.breadcrumb {
     margin-top: 0px;
 }
 
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .post-title {
     margin-top: 0px;
+}
+
+.post-meta {
+    font-family: Courier New, Courier, monospace !important;
+    font-size: 25px;
 }
 
 .post-subtitle {

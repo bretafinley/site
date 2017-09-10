@@ -14,26 +14,23 @@ function BlogCard(props) {
             <h3>{title}</h3>
             <em className="subtitle">{subtitle}</em>
             <div className="row">
+                <span className="card-attr card-attr-icon col-md-1"><FaCalendar /></span>
+                <span className="card-attr card-attr-name col-md-11">{formattedDate}</span>
+            </div>
+            <div className="row">
             <span className="card-attr card-attr-icon col-md-1"><FaFolder /></span>
-            <span className="card-attr card-attr-name col-md-1">DIR:</span>
-            <span className="card-attr col-md-10">
+            <span className="card-attr card-attr-name col-md-11">
                 <ol className="breadcrumb">
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to={`/category/${category}`}>{category}</Link></li>
                     <li className="active"><Link to={`/folder/${category}/${folder}`}>{folder}</Link></li>
                 </ol>
             </span>
-        </div>
-        <div className="row">
-            <span className="card-attr attr-icon col-md-1"><FaTag /></span>
-            <span className="card-attr card-attr-name col-md-1">TAGS:</span>
-            <span className="card-attr col-md-10">{renderedTags}</span>
-        </div>
-        <div className="row">
-            <span className="card-attr attr-icon col-md-1"><FaCalendar /></span>
-            <span className="card-attr card-attr-name col-md-1">DATE:</span>
-            <span className="card-attr col-md-10">{formattedDate}</span>
-        </div>
+            </div>
+            <div className="row">
+                <span className="card-attr card-attr-icon col-md-1"><FaTag /></span>
+                <span className="card-attr card-attr-name col-md-11">{renderedTags}</span>
+            </div>
             <hr />
             <blockquote>
                 <p className="card-excerpt">{props.excerpt}</p>

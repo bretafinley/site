@@ -15,9 +15,12 @@ function ProjectCard(props) {
             <h3>{title}</h3>
             <em className="subtitle">{subtitle}</em>
             <div className="row">
+            <span className="card-attr card-attr-icon col-md-1"><FaCalendar /></span>
+            <span className="card-attr card-attr-name col-md-11">{formattedDate}</span>
+        </div>
+            <div className="row">
                 <span className="card-attr card-attr-icon col-md-1"><FaFolder /></span>
-                <span className="card-attr card-attr-name col-md-1">DIR:</span>
-                <span className="card-attr col-md-10">
+                <span className="card-attr card-attr-name col-md-11">
                     <ol className="breadcrumb">
                         <li><Link to="/projects">Projects</Link></li>
                         <li><Link to={`/category/${category}`}>{category}</Link></li>
@@ -26,19 +29,12 @@ function ProjectCard(props) {
                 </span>
             </div>
             <div className="row">
-                <span className="card-attr attr-icon col-md-1"><FaTag /></span>
-                <span className="card-attr card-attr-name col-md-1">TAGS:</span>
-                <span className="card-attr col-md-10">{renderedTags}</span>
+                <span className="card-attr card-attr-icon col-md-1"><FaTag /></span>
+                <span className="card-attr card-attr-name col-md-11">{renderedTags}</span>
             </div>
             <div className="row">
-                <span className="card-attr attr-icon col-md-1"><FaGithub /></span>
-                <span className="card-attr card-attr-name col-md-1">REPO:</span>
-                <span className="card-attr col-md-10"><a href={subject_url}>/{shortRepo}</a></span>
-            </div>
-            <div className="row">
-                <span className="card-attr attr-icon col-md-1"><FaCalendar /></span>
-                <span className="card-attr card-attr-name col-md-1">DATE:</span>
-                <span className="card-attr col-md-10">2017-09-05</span>
+                <span className="card-attr card-attr-icon col-md-1"><FaGithub /></span>
+                <span className="card-attr card-attr-name col-md-11"><a href={subject_url}>/{shortRepo}</a></span>
             </div>
             <hr />
             <blockquote>
