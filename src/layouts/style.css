@@ -119,3 +119,17 @@ ol.breadcrumb {
 .card h3 {
     margin-top: 0px;
 }
+
+.post-title {
+    margin-top: 0px;
+}
+
+.post-subtitle {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+}
