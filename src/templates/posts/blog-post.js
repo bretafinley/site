@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import moment from 'moment';
 import ReactDisqusThread from 'react-disqus-thread';
+import {FaFolder, FaCalendar} from 'react-icons/lib/fa';
 
 import Tag from '../../components/tag';
 
@@ -25,17 +26,16 @@ export default function Template({data}) {
             <h1 className="post-title">{post.frontmatter.title}</h1>
             <h3 className="post-subtitle">{post.frontmatter.subtitle}</h3>
             <div className="post-meta">
-                <ol className="breadcrumb">
+                <div><FaCalendar /> {formattedDate}</div>
+                <FaFolder /> <ol className="breadcrumb">
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to={`/category/${post.frontmatter.category}`}>{post.frontmatter.category}</Link></li>
                     <li className="active"><Link to={`/folder/${post.frontmatter.category}/${post.frontmatter.folder}`}>{post.frontmatter.folder}</Link></li>
                 </ol>
-                <br />
-                <div>{renderedTags}</div><br />
-                <div>{formattedDate}</div>
             </div>
             <hr />
             <div className="post-body" dangerouslySetInnerHTML={{__html: post.html}}></div>
+            <div className="post-tags">{renderedTags}</div>
         </div>
     );
 }

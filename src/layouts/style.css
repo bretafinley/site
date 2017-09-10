@@ -129,12 +129,17 @@ ol.breadcrumb {
 
 .post-meta {
     font-family: Courier New, Courier, monospace !important;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .post-subtitle {
     font-style: italic;
     font-weight: lighter;
+}
+
+.post-tags {
+    text-align: center;
+    font-size: 20px;
 }
 
 .post {
