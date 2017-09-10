@@ -21,8 +21,8 @@ function SideCard(props) {
 }
 
 function handleTags(arr) {
-    return arr.map((d)=>{
-        return <a className="list-group-item" href={`/tag/${d}`}>{d}</a>
+    return arr.map((d, i)=>{
+        return <a className="list-group-item" key={i} href={`/tag/${d}`}>{d}</a>
     });
 }
 
@@ -39,7 +39,7 @@ function handleFolders(folders) {
 
     let rendered = [];
     for(let key in category_folders) {
-        rendered.push(<SideCategory category={key} folders={category_folders[key]} />);
+        rendered.push(<SideCategory key={key} category={key} folders={category_folders[key]} />);
     }
 
     return rendered;

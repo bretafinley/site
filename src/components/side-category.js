@@ -15,8 +15,8 @@ function SideCategory(props) {
 }
 
 function handleForlders(category, folders) {
-    return folders.map((folder) => {
-        return <SideFolder category={category} folder={folder} />
+    return folders.map((folder, index) => {
+        return <SideFolder key={index} category={category} folder={folder} />
     });
 };
 

@@ -21,7 +21,7 @@ function ProjectCard(props) {
                     <ol className="breadcrumb">
                         <li><Link to="/projects">Projects</Link></li>
                         <li><Link to={`/category/${category}`}>{category}</Link></li>
-                        <li class="active"><Link to={`/folder/${category}/${folder}`}>{folder}</Link></li>
+                        <li className="active"><Link to={`/folder/${category}/${folder}`}>{folder}</Link></li>
                     </ol>
                 </span>
             </div>
@@ -50,9 +50,9 @@ function ProjectCard(props) {
 }
 
 function handleTags(tags) {
-    return tags.map((tag) => {
+    return tags.map((tag, index) => {
         return (
-            <Tag text={tag} />
+            <Tag key={index} text={tag} />
         );
     });
 }

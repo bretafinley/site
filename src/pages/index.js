@@ -7,13 +7,14 @@ import * as constants from '../util/constants';
 
 const IndexPage = ({data}) => {
   const pages = data.allMarkdownRemark.edges.map((d) => {
+    const id = d.node.id;
     const front = d.node.frontmatter;
     const excerpt = d.node.excerpt;
     switch(front.post_type) {
       case constants.BLOG_TYPE:
-        return <BlogCard frontmatter={front} excerpt={excerpt} />
+        return <BlogCard key={id} frontmatter={front} excerpt={excerpt} />
       case constants.PROJECT_TYPE:
-        return <ProjectCard frontmatter={front} excerpt={excerpt} />
+        return <ProjectCard key={id} frontmatter={front} excerpt={excerpt} />
       default:
         return <div>NO CARD</div>
     }

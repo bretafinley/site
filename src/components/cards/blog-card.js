@@ -44,9 +44,9 @@ function BlogCard(props) {
 }
 
 function handleTags(tags) {
-    return tags.map((tag) => {
+    return tags.map((tag, index) => {
         return (
-            <Tag text={tag} />
+            <Tag key={index} text={tag} />
         );
     });
 }
