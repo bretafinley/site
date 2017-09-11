@@ -8,7 +8,7 @@ import MeCard from '../components/cards/me-card';
 import SideCard from '../components/cards/side-card';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import './theme.css'
-import './style.css'
+import './style.scss'
 
 const Header = () => {
   return (
