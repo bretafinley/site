@@ -14,7 +14,7 @@ function SideCard(props) {
             {renderedFolders}
             <hr />
             <h5><FaTag /> Tags</h5>
-            <div className="list-group">
+            <div className="list-group side-tags">
                 {renderedTags}
             </div>
         </div>

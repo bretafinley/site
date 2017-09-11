@@ -49,6 +49,10 @@ body {
     }
 }
 
+.side-index .side-tags:last-child{
+    margin-bottom: 0px;
+}
+
 .side-index a.list-group-item:hover {
     color: $color-white !important;
     background-color: $color-blue !important;
