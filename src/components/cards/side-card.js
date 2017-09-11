@@ -22,6 +22,9 @@ function SideCard(props) {
 }
 
 function handleTags(arr) {
+    arr.sort((a, b) => {
+        return a.length - b.length;
+    });
     return arr.map((d, i)=>{
         return <a className="list-group-item" key={i} href={`/tag/${d}`}>{d}</a>
     });

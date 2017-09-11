@@ -12,30 +12,27 @@ import './style.scss'
 
 const Header = () => {
   return (
-    <div className="nav-parent">
-    <div className="container">
-    <nav className="navbar" role="navigation">
-      <div className="navbar-header">
-        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span className="sr-only">Toggle navigation</span>
-          <span className="icon-bar"></span>
-          <span className="icon-bar"></span>
-          <span className="icon-bar"></span>
-        </button>
-        <Link className="navbar-brand" to="/">Ghosts and Glass</Link>
-      </div>
-
-      <div className="collapse navbar-collapse navbar-ex1-collapse">
-        <ul className="nav navbar-nav">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
+    <nav className="nav-bar navbar-fixed-top main-nav" role="navigation">
+      <div className="container">
+        <div className="navbar-header">
+          <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span className="sr-only">Toggle navigation</span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+          </button>
+          <Link className="navbar-brand" to="/">Ghosts and Glass</Link>
+        </div>
+        <div className="collapse navbar-collapse navbar-ex1-collapse">
+          <ul className="nav navbar-nav">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    </div>
-    </div>
   );
 }
 

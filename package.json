@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "bretfinley-personal-website",
   "description": "Gatsby default starter",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Bret Finley <bretafinley@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.24",
     "gatsby-link": "^1.6.16",
@@ -25,10 +25,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
+    "gh-pages": "^1.0.0",
     "prettier": "^1.6.1"
   }
 }
