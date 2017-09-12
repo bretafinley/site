@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link'
-import {FaFolder, FaTag, FaGit, FaCalendar} from 'react-icons/lib/fa';
+import {FaFolder, FaTag, FaCalendar} from 'react-icons/lib/fa';
 import moment from 'moment';
 
 import Tag from '../tag';
