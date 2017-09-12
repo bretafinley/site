@@ -5,3 +5,4 @@ make "recent posts" cards that have a bit more information
 figure out image hosting
 put pictures in their own "card" at the top of posts, about needs one
 still need to add resume
+clean up margin values
