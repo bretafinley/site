@@ -7,7 +7,7 @@ export default function Template(props) {
     const cat = props.pathContext.category;
     return (
         <div>
-            <h2 className="page-title">Category: {cat}</h2>
+            <h2 className="card page-title">Category: {cat}</h2>
             <IndexDefault data={data} />
         </div>
     );

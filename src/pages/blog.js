@@ -4,14 +4,14 @@ import Link from 'gatsby-link'
 import BlogCard from '../components/cards/blog-card';
 
 const Blog = ({data}) => {
-  const blogs = data.allMarkdownRemark.edges.map((d) => {
+  const blogs = data.allMarkdownRemark.edges.map((d, i) => {
     const excerpt = d.node.excerpt;
     const front = d.node.frontmatter;
-    return <BlogCard frontmatter={front} excerpt={excerpt} />
+    return <BlogCard key={i} frontmatter={front} excerpt={excerpt} />
   });
   return (
       <div>
-        <h2 className="page-title">Blog</h2>
+        <h2 className="page-title card">Blog</h2>
         {blogs}
       </div>
   );

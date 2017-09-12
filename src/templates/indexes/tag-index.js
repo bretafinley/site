@@ -7,7 +7,7 @@ export default function Template(props) {
     const tag = props.pathContext.tag;
     return (
         <div>
-            <h2 className="page-title">Tag: {tag}</h2>
+            <h2 className="card page-title">Tag: {tag}</h2>
             <IndexDefault data={data} />
         </div>
     );

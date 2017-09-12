@@ -22,9 +22,11 @@ export default function Template({data}) {
     const renderedTags = handleTags(post.frontmatter.tags);
     const formattedDate = moment(post.frontmatter.post_date, "YYYYMMDD").format('ll');
     return (
-        <div className="post">
-            <h1 className="post-title">{post.frontmatter.title}</h1>
-            <h3 className="post-subtitle">{post.frontmatter.subtitle}</h3>
+        <div>
+            <div className="post-titles">
+                <h1 className="post-title">{post.frontmatter.title}</h1>
+                <h3 className="post-subtitle">{post.frontmatter.subtitle}</h3>
+            </div>
             <div className="post-meta">
                 <div><FaCalendar /> {formattedDate}</div>
                 <FaFolder /> <ol className="breadcrumb">
@@ -32,8 +34,7 @@ export default function Template({data}) {
                     <li><Link to={`/category/${post.frontmatter.category}`}>{post.frontmatter.category}</Link></li>
                     <li className="active"><Link to={`/folder/${post.frontmatter.category}/${post.frontmatter.folder}`}>{post.frontmatter.folder}</Link></li>
                 </ol>
-            </div>
-            <hr />
+            </div> 
             <div className="post-body" dangerouslySetInnerHTML={{__html: post.html}}></div>
             <div className="post-tags">{renderedTags}</div>
         </div>

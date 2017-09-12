@@ -4,14 +4,14 @@ import Link from 'gatsby-link';
 import ProjectCard from '../components/cards/project-card';
 
 const Projects = ({data}) => {
-  const projects = data.allMarkdownRemark.edges.map((d) => {
+  const projects = data.allMarkdownRemark.edges.map((d, i) => {
     const excerpt = d.node.excerpt;
     const front = d.node.frontmatter;
-    return <ProjectCard frontmatter={front} excerpt={excerpt} />
+    return <ProjectCard key={i} frontmatter={front} excerpt={excerpt} />
   });
   return (
     <div>
-      <h2 className="page-title">Projects</h2>
+      <h2 className="card page-title">Projects</h2>
       {projects}
     </div>
   );

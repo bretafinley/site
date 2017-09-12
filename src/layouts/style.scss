@@ -35,8 +35,6 @@ body {
 
 .side-index {
     font-family: $font-mono !important;
-    background-color: $color-white;
-    padding: 10px;
 
     a.list-group-item {
         color: $color-blue !important;
@@ -80,7 +78,7 @@ ol.breadcrumb {
     font-size: 18px;
 }
 
-#folders-header {
+.side-header {
     margin-top: 0px;
 }
 
@@ -120,7 +118,6 @@ ol.breadcrumb {
 .card {
     padding: 10px;
     margin-bottom: 35px;
-    max-width: 700px;
     background-color: $color-white;
     box-shadow: 0 1px 2px rgba(0,0,0,.05)
 }
@@ -134,18 +131,27 @@ ol.breadcrumb {
     margin-bottom: 10px;
 }
 
-.post-title {
-    margin-top: 0px;
+.post-titles {
+    @extend .card;
+    margin-bottom: 20px;
 }
 
-.post-meta {
-    font-family: $font-mono !important;
-    font-size: 20px;
+.post-title {
+    margin-top: 0px;
+    font-family: $font-mono;
 }
 
 .post-subtitle {
     font-style: italic;
     font-weight: lighter;
+    font-family: $font-mono;
+}
+
+.post-meta {
+    @extend .post;
+    font-family: $font-mono !important;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .post-tags {
@@ -156,19 +162,23 @@ ol.breadcrumb {
 .post {
     background-color: $color-white;
     padding: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05)
+}
+
+.post-body {
+    @extend .post;
+    margin-bottom: 30px;
 }
 
 h2.page-title {
     margin-top: 0px;
     font-family: $font-mono !important;
-    background-color: $color-white;
-    padding: 10px;
 }
 
 .about-body {
     background-color: $color-white;
     padding: 10px;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .about-links {

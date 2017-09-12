@@ -21,7 +21,7 @@ const IndexPage = ({data}) => {
   });
   return (
     <div>
-      <h2 className="page-title">Home</h2>
+      <h2 className="card page-title">Home</h2>
       {pages}
     </div>
   );

@@ -7,7 +7,7 @@ export default function Template(props) {
     const folder = props.pathContext.folder;
     return (
         <div>
-            <h2 className="page-title">Folder: {folder}</h2>
+            <h2 className="card page-title">Folder: {folder}</h2>
             <IndexDefault data={data} />
         </div>
     );

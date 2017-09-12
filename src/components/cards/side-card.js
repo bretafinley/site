@@ -10,12 +10,15 @@ function SideCard(props) {
 
     return (
         <div className="side-index">
-            <h5 id="folders-header"><FaFolder /> Folders</h5>
-            {renderedFolders}
-            <hr />
-            <h5><FaTag /> Tags</h5>
-            <div className="list-group side-tags">
-                {renderedTags}
+            <div className="card">
+                <h5 className="side-header"><FaFolder /> Folders</h5>
+                {renderedFolders}
+            </div>
+            <div className="card">
+                <h5 className="side-header"><FaTag /> Tags</h5>
+                <div className="list-group side-tags">
+                    {renderedTags}
+                </div>
             </div>
         </div>
     );
