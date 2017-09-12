@@ -2,8 +2,15 @@ import React from 'react';
 
 import IndexDefault from './index-default';
 
-export default function Template({data}) {
-    return <IndexDefault data={data} />
+export default function Template(props) {
+    const data = props.data;
+    const tag = props.pathContext.tag;
+    return (
+        <div>
+            <h2 className="page-title">Tag: {tag}</h2>
+            <IndexDefault data={data} />
+        </div>
+    );
 }
 
 export const postQuery = graphql`

@@ -12,17 +12,15 @@ export default function TemplateDefault(props) {
 
         switch(front.post_type) {
             case constants.BLOG_TYPE:
-                return <BlogCard frontmatter={front} excerpt={excerpt} />
+                return <BlogCard key={d.node.id} frontmatter={front} excerpt={excerpt} />
             case constants.PROJECT_TYPE:
-                return <ProjectCard frontmatter={front} excerpt={excerpt} />
+                return <ProjectCard key={d.node.id} frontmatter={front} excerpt={excerpt} />
             default:
                 return <div>NO CARD</div>
         }
     });
 
     return (
-        <div>
-            <div className="col-md-12">{pages}</div>
-        </div>
+        <div>{pages}</div>
     );
 }

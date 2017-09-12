@@ -9,7 +9,7 @@ hr {
 }
 
 body {
-    padding-top: 75px;
+    padding-top: 80px;
     background-color: $color-offwhite;
 }
 
@@ -156,4 +156,11 @@ ol.breadcrumb {
 .post {
     background-color: $color-white;
     padding: 20px;
+}
+
+h2.page-title {
+    margin-top: 0px;
+    font-family: $font-mono !important;
+    background-color: $color-white;
+    padding: 10px;
 }
