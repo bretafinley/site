@@ -10,7 +10,10 @@ const Projects = ({data}) => {
     return <ProjectCard frontmatter={front} excerpt={excerpt} />
   });
   return (
-    <div className="col-md-12">{projects}</div>
+    <div>
+      <h2 className="page-title">Projects</h2>
+      {projects}
+    </div>
   );
 };
   

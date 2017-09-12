@@ -20,7 +20,10 @@ const IndexPage = ({data}) => {
     }
   });
   return (
-    <div className="col-md-12">{pages}</div>
+    <div>
+      <h2 className="page-title">Home</h2>
+      {pages}
+    </div>
   );
 }
 
