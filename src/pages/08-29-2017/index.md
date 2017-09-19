@@ -3,7 +3,7 @@ path: '/second-post'
 title: 'Second Blog Post'
 subtitle: 'Electric Boogaloo'
 post_type: 1
-post_date: 2017-09-05
+post_date: 2017-08-29
 subject_url: ''
 category: 'Rant'
 folder: 'Languages'

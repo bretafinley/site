@@ -18,9 +18,9 @@ function BlogCard(props) {
                 <span className="card-attr card-attr-name col-md-11">{formattedDate}</span>
             </div>
             <div className="row">
-            <span className="card-attr card-attr-icon col-md-1"><FaFolder /></span>
-            <span className="card-attr card-attr-name col-md-11">
-                <ol className="breadcrumb">
+                <span className="card-attr card-attr-icon col-md-1"><FaFolder /></span>
+                <span className="card-attr card-attr-name col-md-11">
+                <ol className="breadcrumb folder-links">
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to={`/category/${category}`}>{category}</Link></li>
                     <li className="active"><Link to={`/folder/${category}/${folder}`}>{folder}</Link></li>

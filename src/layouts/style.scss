@@ -187,3 +187,9 @@ h2.page-title {
     color: $color-blue;
     text-align: center;
 }
+
+ol.folder-links li a:hover {
+    color: $color-white;
+    background-color: $color-blue;
+    text-decoration: none;
+}
