@@ -134,6 +134,7 @@ ol.breadcrumb {
 .post-titles {
     @extend .card;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .post-title {
@@ -193,4 +194,14 @@ ol.folder-links li a:hover {
     color: $color-white;
     background-color: $color-blue;
     text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+    h2.page-title {
+        margin-top: 10px;
+    }
+
+    .post-titles {
+        margin-top: 10px;
+    }
 }
