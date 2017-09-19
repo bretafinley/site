@@ -7,3 +7,6 @@ put pictures in their own "card" at the top of posts, about needs one
 still need to add resume
 clean up margin values
 work on readme
+add welcome card thingy
+find out why hamburger menu doesn't show on smaller screens
+page titles need to separate from titlebar
