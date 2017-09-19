@@ -1,13 +1,5 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Site
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+This repository contains the source code for my personal website. This website is built using [GatsbyJS](https://www.gatsbyjs.org), a React static site generator. The intent of this site is to give a landing page for my personal projects, thoughts, and things happening in my life.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+This site can be reached at [http://www.ghostsandglass.com](http://www.ghostsandglass.com)
