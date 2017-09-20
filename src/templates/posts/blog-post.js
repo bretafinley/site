@@ -2,18 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import moment from 'moment';
-import ReactDisqusThread from 'react-disqus-thread';
+import ReactDisqusComments from 'react-disqus-comments';
 import {FaFolder, FaCalendar} from 'react-icons/lib/fa';
 
 import Tag from '../../components/tag';
-
-{/* <ReactDisqusThread
-				shortname="ghostsandglass"
-				identifier={`ghostsandglass-blog-${post.id}`}
-				title={post.frontmatter.title}
-				url={`ghostsandglass.com`}
-				category_id="123456"
-				onNewComment={this.handleNewComment}/> */}
 
 // strip data off of the object the callee passes in
 export default function Template({data}) {
@@ -21,6 +13,7 @@ export default function Template({data}) {
     const { markdownRemark: post } = data;
     const renderedTags = handleTags(post.frontmatter.tags);
     const formattedDate = moment(post.frontmatter.post_date, "YYYYMMDD").format('ll');
+    console.log(post)
     return (
         <div>
             <div className="post-titles">
@@ -37,6 +30,13 @@ export default function Template({data}) {
             </div> 
             <div className="post-body" dangerouslySetInnerHTML={{__html: post.html}}></div>
             <div className="post-tags">{renderedTags}</div>
+            <ReactDisqusComments
+				shortname="ghostsandglass"
+				identifier={`ghostsandglass-blog-${post.id}`}
+				title={post.frontmatter.title}
+				url={`http://www.ghostsandglass.com/${post.frontmatter.path}`}
+				category_id="123456"
+				onNewComment={this.handleNewComment}/>
         </div>
     );
 }
