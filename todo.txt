@@ -10,5 +10,3 @@ work on readme
 add welcome card thingy
 find out why hamburger menu doesn't show on smaller screens
         need to inlcude bootstrap plugin
-page titles need to separate from titlebar
-add utility for creating icons - icon factory or something

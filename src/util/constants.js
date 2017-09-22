@@ -25,3 +25,6 @@ export const ICON_FACEBOOK = "facebook";
 export const ICON_TWITTER = "twitter";
 export const ICON_LINKEDIN = "linkedin";
 export const ICON_DIRINDENT = "dirindent";
+
+export const DISQUS_SHORTNAME = "ghostsandglass";
+export const SITE_URL = "http://www.ghostsandglass.com";
