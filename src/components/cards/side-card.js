@@ -1,7 +1,7 @@
 import React from 'react';
-import {FaTag, FaFolder} from 'react-icons/lib/fa';
 
 import {getUniqueIdentifiers} from '../../util/utilities';
+import IconFactory from '../../components/icon-factory';
 import SideCategory from '../side-category';
 
 function SideCard(props) {
@@ -11,11 +11,11 @@ function SideCard(props) {
     return (
         <div className="side-index">
             <div className="card">
-                <h5 className="side-header"><FaFolder /> Folders</h5>
+                <h5 className="side-header"><IconFactory icon="folder" /> Folders</h5>
                 {renderedFolders}
             </div>
             <div className="card">
-                <h5 className="side-header"><FaTag /> Tags</h5>
+                <h5 className="side-header"><IconFactory icon="tag" /> Tags</h5>
                 <div className="list-group side-tags">
                     {renderedTags}
                 </div>

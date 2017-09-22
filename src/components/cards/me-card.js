@@ -1,25 +1,25 @@
 import React from 'react';
-import {FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaFacebook} from 'react-icons/lib/fa';
 
-import {PROFILE_LINK, EMAIL_LINK, LINKEDIN_LINK, GITHUB_LINK, TWITTER_LINK, FACEBOOK_LINK} from '../../util/constants';
+import {LINK_PROFILE, LINK_EMAIL, LINK_LINKEDIN, LINK_GITHUB, LINK_TWITTER, LINK_FACEBOOK} from '../../util/constants';
+import IconFactory from '../icon-factory';
 
 function MeCard(props) {
     return (
         <div className="me">
             <h4>Bret Finley</h4>
-            <img src={PROFILE_LINK} alt="..." className="img-circle" />
+            <img src={LINK_PROFILE} alt="..." className="img-circle" />
             <div><em>Developer, Human</em></div>
             <div>Boise, Idaho</div>
             <div className="btn-group" role="group">
-                <a className="btn" href={EMAIL_LINK} target="_blank"><FaEnvelope /></a>
+                <a className="btn" href={LINK_EMAIL} target="_blank"><IconFactory icon="email" /></a>
             </div>
             <div className="btn-group" role="group">
-                <a className="btn" href={LINKEDIN_LINK} target="_blank"><FaLinkedin /></a>
-                <a className="btn" href={GITHUB_LINK} target="_blank"><FaGithub /></a>
+                <a className="btn" href={LINK_LINKEDIN} target="_blank"><IconFactory icon="linkedin" /></a>
+                <a className="btn" href={LINK_GITHUB} target="_blank"><IconFactory icon="github" /></a>
             </div>
             <div className="btn-group" role="group">
-                <a className="btn" href={TWITTER_LINK} target="_blank"><FaTwitter /></a>
-                <a className="btn" href={FACEBOOK_LINK} target="_blank"><FaFacebook /></a>
+                <a className="btn" href={LINK_TWITTER} target="_blank"><IconFactory icon="twitter" /></a>
+                <a className="btn" href={LINK_FACEBOOK} target="_blank"><IconFactory icon="facebook" /></a>
             </div>
         </div>
     );

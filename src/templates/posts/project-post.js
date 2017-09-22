@@ -2,9 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import moment from 'moment';
-import {FaFolder, FaGithub, FaCalendar} from 'react-icons/lib/fa';
 
 import Tag from '../../components/tag';
+import IconFactory from '../../components/icon-factory';
 
 // strip data off of the object the callee passes in
 export default function Template({data}) {
@@ -18,13 +18,13 @@ export default function Template({data}) {
                 <h3 className="post-subtitle">{post.frontmatter.subtitle}</h3>
             </div>
             <div className="post-meta">
-                <div><FaCalendar /> {formattedDate}</div>
-                <FaFolder /> <ol className="breadcrumb">
+                <div><IconFactory icon="calendar" /> {formattedDate}</div>
+                <IconFactory icon="folder" /> <ol className="breadcrumb">
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to={`/category/${post.frontmatter.category}`}>{post.frontmatter.category}</Link></li>
                     <li className="active"><Link to={`/folder/${post.frontmatter.category}/${post.frontmatter.folder}`}>{post.frontmatter.folder}</Link></li>
                 </ol>
-                <div><FaGithub /> <Link to={post.frontmatter.subject_url}>{post.frontmatter.subject_url}</Link></div>
+                <div><IconFactory icon="github" /> <Link to={post.frontmatter.subject_url}>{post.frontmatter.subject_url}</Link></div>
             </div>
             <div className="post-body" dangerouslySetInnerHTML={{__html: post.html}}></div>
             <div className="post-tags">{renderedTags}</div>

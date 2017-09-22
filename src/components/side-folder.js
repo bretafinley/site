@@ -1,10 +1,11 @@
 import React from 'react';
-import {FaAngleRight} from 'react-icons/lib/fa';
+
+import IconFactory from './icon-factory';
 
 function SideFolder(props) {
     return (
         <a className="list-group-item" href={`/folder/${props.category}/${props.folder}`}>
-            <FaAngleRight />
+            <IconFactory icon="dirindent" />
             {props.folder}
         </a>
     );

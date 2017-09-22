@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link'
-import {FaFolder, FaTag, FaCalendar} from 'react-icons/lib/fa';
 import moment from 'moment';
 
 import Tag from '../tag';
+import IconFactory from '../icon-factory';
 
 function BlogCard(props) {
     const {title, subtitle, post_date, category, folder, path, tags } = props.frontmatter;
@@ -14,11 +14,11 @@ function BlogCard(props) {
             <h3>{title}</h3>
             <em className="subtitle">{subtitle}</em>
             <div className="row">
-                <span className="card-attr card-attr-icon col-md-1"><FaCalendar /></span>
+                <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="calendar" /></span>
                 <span className="card-attr card-attr-name col-md-11">{formattedDate}</span>
             </div>
             <div className="row">
-                <span className="card-attr card-attr-icon col-md-1"><FaFolder /></span>
+                <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="folder" /></span>
                 <span className="card-attr card-attr-name col-md-11">
                 <ol className="breadcrumb folder-links">
                     <li><Link to="/projects">Projects</Link></li>
@@ -28,7 +28,7 @@ function BlogCard(props) {
             </span>
             </div>
             <div className="row">
-                <span className="card-attr card-attr-icon col-md-1"><FaTag /></span>
+                <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="tag" /></span>
                 <span className="card-attr card-attr-name col-md-11">{renderedTags}</span>
             </div>
             <hr />
