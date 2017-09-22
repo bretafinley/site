@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import moment from 'moment';
 
 import Tag from '../../components/tag';
+import Comments from '../../components/comments';
 import IconFactory from '../../components/icon-factory';
 
 // strip data off of the object the callee passes in
@@ -28,6 +29,7 @@ export default function Template({data}) {
             </div> 
             <div className="post-body" dangerouslySetInnerHTML={{__html: post.html}}></div>
             <div className="post-tags">{renderedTags}</div>
+            <Comments post={post} />
         </div>
     );
 }
