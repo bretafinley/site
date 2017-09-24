@@ -1,5 +1,6 @@
-import React from 'react'
-import Link from 'gatsby-link'
+
+import React from 'react';
+import Link from 'gatsby-link';
 
 import BlogCard from '../components/cards/blog-card';
 
@@ -10,10 +11,10 @@ const Blog = ({data}) => {
     return <BlogCard key={i} frontmatter={front} excerpt={excerpt} />
   });
   return (
-      <div>
-        <h2 className="page-title card">Blog</h2>
-        {blogs}
-      </div>
+    <div>
+      <h2 className="page-title card">Blog</h2>
+      {blogs}
+    </div>
   );
 };
 

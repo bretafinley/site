@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import ReactDisqusComments from "react-disqus-comments";
 
@@ -42,7 +43,5 @@ class Comments extends Component {
     );
   }
 }
-
-
 
 export default Comments;

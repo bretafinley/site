@@ -1,14 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 import {getUniqueIdentifiers} from '../util/utilities';
 import MeCard from '../components/cards/me-card';
 import SideCard from '../components/cards/side-card';
-import '../../node_modules/bootstrap/dist/css/bootstrap.css'
-import './theme.css'
-import './style.scss'
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import './theme.css';
+import './style.scss';
 
 const Header = () => {
   return (

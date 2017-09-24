@@ -1,5 +1,6 @@
-import React from 'react'
-import Link from 'gatsby-link'
+
+import React from 'react';
+import Link from 'gatsby-link';
 
 import BlogCard from '../components/cards/blog-card';
 import ProjectCard from '../components/cards/project-card';

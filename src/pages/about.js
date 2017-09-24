@@ -1,8 +1,9 @@
+
 import React from 'react';
 import Link from 'gatsby-link';
-import {FaFile, FaEnvelope, FaGithub, FaLinkedin, FaFacebook, FaTwitter} from 'react-icons/lib/fa';
 
-import {EMAIL_LINK, RESUME_LINK, LINKEDIN_LINK, GITHUB_LINK, TWITTER_LINK, FACEBOOK_LINK} from '../util/constants';
+import {LINK_EMAIL, LINK_RESUME, LINK_LINKEDIN, LINK_GITHUB, LINK_TWITTER, LINK_FACEBOOK} from '../util/constants';
+import IconFactory from '../components/icon-factory';
 
 function About() {
   return (
@@ -19,26 +20,26 @@ function About() {
         <div className="about-links">
           <div className="row">
             <div className="col-md-6">
-              <FaFile /> <a href={RESUME_LINK} target="_blank">Resume</a>
+              <IconFactory icon="file" /> <a href={LINK_RESUME} target="_blank">Resume</a>
             </div>
             <div className="col-md-6">
-              <FaEnvelope /> <a href={EMAIL_LINK} target="_blank">Email</a>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6">
-              <FaLinkedin /> <a href={LINKEDIN_LINK} target="_blank">LinkedIn</a>
-            </div>
-            <div className="col-md-6">
-              <FaGithub /> <a href={GITHUB_LINK} target="_blank">GitHub</a>
+              <IconFactory icon="email" /> <a href={LINK_EMAIL} target="_blank">Email</a>
             </div>
           </div>
           <div className="row">
             <div className="col-md-6">
-              <FaFacebook /> <a href={FACEBOOK_LINK} target="_blank">Facebook</a>
+              <IconFactory icon ="linkedin" /> <a href={LINK_LINKEDIN} target="_blank">LinkedIn</a>
             </div>
             <div className="col-md-6">
-              <FaTwitter /> <a href={TWITTER_LINK} target="_blank">Twitter</a>
+              <IconFactory icon="github" /> <a href={LINK_GITHUB} target="_blank">GitHub</a>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-6">
+              <IconFactory icon="facebook" /> <a href={LINK_FACEBOOK} target="_blank">Facebook</a>
+            </div>
+            <div className="col-md-6">
+              <IconFactory icon="twitter" /> <a href={LINK_TWITTER} target="_blank">Twitter</a>
             </div>
           </div>
         </div>
@@ -46,6 +47,5 @@ function About() {
     </div>
   );
 }
-  
 
 export default About;
