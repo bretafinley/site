@@ -23,6 +23,14 @@ const IndexPage = ({data}) => {
   return (
     <div>
       <h2 className="card page-title">Home</h2>
+      <div className="card">
+        <h3>Hi There!</h3>
+        <p>Welcome to my website: GhostsAndGlass.com. Here I have all of my current coding projects,
+          thoughts, reviews, and rants. I love to code, read, and write, and this site is a tribute
+          to all of that. Feel free to contact me via <a href="mailto:bretafinley@gmail.com">email</a> or
+          connect with me on social media. 
+        </p>
+      </div>
       {pages}
     </div>
   );
