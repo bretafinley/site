@@ -7,9 +7,9 @@ export const CATEGORY_ROUTE = "/category/";
 export const FOLDER_ROUTE = "/folder/";
 export const TAG_ROUTE = "/tag/";
 
-export const LINK_PROFILE = "https://s20.postimg.org/vmtztjunh/placeholder-profile.png";
+export const LINK_PROFILE = "https://cdn-std.dprcdn.net/files/acc_581030/yss6Mf";
 export const LINK_EMAIL ="mailto:bretafinley@gmail.com";
-export const LINK_RESUME = "";
+export const LINK_RESUME = "https://d.pr/DLJeTL";
 export const LINK_LINKEDIN = "https://www.linkedin.com/in/bret-finley-97071475";
 export const LINK_GITHUB = "https://github.com/bretafinley";
 export const LINK_TWITTER = "https://twitter.com/HeinousParadigm?lang=en";

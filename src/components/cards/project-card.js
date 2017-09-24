@@ -20,6 +20,10 @@ function ProjectCard(props) {
         <span className="card-attr card-attr-name col-md-11">{formattedDate}</span>
       </div>
       <div className="row">
+        <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="github" /></span>
+        <span className="card-attr card-attr-name col-md-11"><a href={subject_url}>{shortRepo}</a></span>
+      </div>
+      <div className="row">
         <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="folder" /></span>
         <span className="card-attr card-attr-name col-md-11">
             <ol className="breadcrumb folder-links">
@@ -29,19 +33,15 @@ function ProjectCard(props) {
             </ol>
         </span>
       </div>
-        <div className="row">
-          <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="tag" /></span>
-          <span className="card-attr card-attr-name col-md-11">{renderedTags}</span>
-        </div>
-        <div className="row">
-          <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="github" /></span>
-          <span className="card-attr card-attr-name col-md-11"><a href={subject_url}>/{shortRepo}</a></span>
-        </div>
-        <hr />
-        <blockquote>
-          <p className="card-excerpt">{props.excerpt}</p>
-        </blockquote>
-        <Link className="btn btn-default" to={path}>READ MORE</Link>
+      <div className="row">
+        <span className="card-attr card-attr-icon col-md-1"><IconFactory icon="tag" /></span>
+        <span className="card-attr card-attr-name col-md-11">{renderedTags}</span>
+      </div>
+      <hr />
+      <blockquote>
+        <p className="card-excerpt">{props.excerpt}</p>
+      </blockquote>
+      <Link className="btn btn-default" to={path}>READ MORE</Link>
     </div>
   );
 }
@@ -56,7 +56,7 @@ function handleTags(tags) {
 
 function stripRepo(repoURL) {
   const parts = repoURL.split("/");
-  return parts.slice(-1)[0]; 
+  return `${parts.slice(-2)[0]}/${parts.slice(-1)[0]}`; 
 }
 
 export default ProjectCard;

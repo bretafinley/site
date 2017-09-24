@@ -1,15 +1,16 @@
 ---
-path: '/crime'
-title: 'Crime'
-subtitle: 'Data Visualization of Criminal Activity in Chicago, Illinois'
+path: '/coop'
+title: 'COOP'
+subtitle: 'Counterfeit Object Oriented Programming'
 post_type: 2
-post_date: 2017-09-02
-subject_url: 'https://github.com/bretafinley/crime'
-category: 'Web'
-folder: 'JavaScript'
+post_date: 2017-09-03
+subject_url: 'https://github.com/bretafinley/coop'
+category: 'Security'
+folder: 'Stack'
 tags:
-  - D3
-  - Crime
+  - RILC
+  - Smash
+  - OO
 ---
 
 A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
