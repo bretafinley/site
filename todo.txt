@@ -1,9 +1,7 @@
 think about adding "image" metadata to posts, could use this for a time-line style header or something
     images are handled really strangely in gatsby
 make "recent posts" cards that have a bit more information
-figure out image hosting
 put pictures in their own "card" at the top of posts, about needs one
-still need to add resume
 find out why hamburger menu doesn't show on smaller screens
         need to inlcude bootstrap plugin
-add linter or something
+add linter or something for styles

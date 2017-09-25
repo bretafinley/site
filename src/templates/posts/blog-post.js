@@ -27,8 +27,11 @@ export default function Template({data}) {
             <li><Link to={`/category/${post.frontmatter.category}`}>{post.frontmatter.category}</Link></li>
             <li className="active"><Link to={`/folder/${post.frontmatter.category}/${post.frontmatter.folder}`}>{post.frontmatter.folder}</Link></li>
           </ol>
-        </div> 
-        <div className="post-body" dangerouslySetInnerHTML={{__html: post.html}}></div>
+        </div>
+        <div className="post-body">
+          <img className="img-responsive post-img" src={post.frontmatter.image_url} />
+          <div dangerouslySetInnerHTML={{__html: post.html}}></div>
+        </div>
         <div className="post-tags">{renderedTags}</div>
         <Comments post={post} />
     </div>
@@ -53,6 +56,7 @@ query BlogPostByPath($path: String!) {
       title
       subtitle
       post_date
+      image_url
       category
       folder
       tags

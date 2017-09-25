@@ -5,6 +5,7 @@ subtitle: 'Electric Boogaloo'
 post_type: 1
 post_date: 2017-08-29
 subject_url: ''
+image_url: 'https://raw.githubusercontent.com/d3/d3-logo/master/d3-black.png'
 category: 'Rant'
 folder: 'Languages'
 tags:

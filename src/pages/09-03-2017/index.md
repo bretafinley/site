@@ -5,6 +5,7 @@ subtitle: 'Counterfeit Object Oriented Programming'
 post_type: 2
 post_date: 2017-09-03
 subject_url: 'https://github.com/bretafinley/coop'
+image_url: 'https://raw.githubusercontent.com/d3/d3-logo/master/d3-black.png'
 category: 'Security'
 folder: 'Stack'
 tags:

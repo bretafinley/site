@@ -27,7 +27,10 @@ export default function Template({data}) {
         </ol>
         <div><IconFactory icon="github" /> <Link to={post.frontmatter.subject_url}>{post.frontmatter.subject_url}</Link></div>
       </div>
-      <div className="post-body" dangerouslySetInnerHTML={{__html: post.html}}></div>
+      <div className="post-body">
+        <img className="img-responsive post-img" src={post.frontmatter.image_url} />
+        <div dangerouslySetInnerHTML={{__html: post.html}}></div>
+      </div>
       <div className="post-tags">{renderedTags}</div>
     </div>
   );
@@ -52,6 +55,7 @@ query ProjectPostByPath($path: String!) {
       subtitle
       post_date
       subject_url
+      image_url
       category
       folder
       tags
