@@ -32,6 +32,7 @@ query FolderIndex($category: String!, $folder: String!) {
             path
             post_type
             subject_url
+            post_date
             category
             folder
             tags
