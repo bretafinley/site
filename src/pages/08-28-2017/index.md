@@ -1,27 +1,26 @@
 ---
 path: '/first-post'
-title: 'First Blog Post'
-subtitle: 'A Long Way From Home'
+title: 'Gotta Start Somewhere'
+subtitle: 'Having a good time, old sport?'
 post_type: 1
 post_date: 2017-08-28
 subject_url: ''
 image_url: ''
 category: 'Editorials'
-folder: 'Development'
+folder: 'Misc'
 tags:
-  - Code
-  - Foo
-  - Bar
-  - Baz
+  - GatsbyJS
   - JavaScript
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac nulla euismod, faucibus tortor in, tincidunt ante. Maecenas quam neque, molestie ac dictum in, ultricies vel sem. Integer volutpat magna enim, et ornare est pellentesque ut. Quisque ut ligula consequat, varius ex ut, faucibus mauris. Sed nec libero efficitur, venenatis lorem vitae, hendrerit nisi. Maecenas interdum pretium felis, eu dignissim mi mollis sed. Aliquam euismod sodales enim quis tincidunt. Sed auctor consequat iaculis. Aenean pharetra semper massa id vestibulum. Mauris justo lorem, rhoncus sit amet mauris et, efficitur blandit neque. Morbi pharetra ex a vehicula cursus.
+Every blog website needs a first post. One that sets the tone for the other blogs to come. But what should it be about? Well, the most appropriate thing I can think of is my experience with React, GatsbyJS, and actually building out this site. There’s still a lot to do in terms of overall polish and adding project and blog content, but as of now I’m happy enough to publish it.
 
-Praesent interdum tortor ex, in dapibus lacus vulputate quis. In sapien orci, dignissim fermentum mattis ut, viverra ac sem. Nulla eu tortor quam. Suspendisse nec mollis tortor. Aenean neque ex, lacinia sit amet condimentum ut, lacinia vel tellus. Morbi mattis, turpis egestas posuere consectetur, enim metus pharetra leo, ut iaculis massa diam et ipsum. Vivamus pharetra tellus nec pellentesque ullamcorper. Praesent ac mattis odio. Cras quis justo vel justo auctor lobortis ac vel nibh. Morbi blandit ullamcorper sollicitudin. Ut ac risus et ipsum sollicitudin luctus. Ut eget faucibus ipsum. Nunc volutpat nunc a lectus facilisis, ut dignissim lorem suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras nisl sem, blandit sit amet ultricies a, feugiat eu turpis. Quisque id blandit quam.
+Prior to writing this website I had no experience with React. In designing a personal website, I knew that I wanted a blog of some kind and some way to showcase different projects I was working on. As far as development goes, I wanted to work with a stack that would be simple to get up and running, but be able to learn a different technology along the way.
 
-Integer viverra interdum ligula eu consequat. Morbi velit purus, convallis non interdum nec, efficitur eget metus. Duis nisl velit, pulvinar et sapien in, finibus lobortis nulla. Ut vitae nibh mi. Ut et ultricies est. Integer sed augue felis. Morbi vitae urna pretium, vestibulum turpis at, bibendum tellus. Nulla suscipit eu justo vitae fermentum. Aenean in odio molestie, faucibus ante at, pellentesque leo.
+I had initially opted for an Angular 2 app with Spring Boot and MySQL for the backend. I have had previous experience with AngularJS and ServiceStack. I figured this stack would be similar enough to alleviate extra frustration, and different enough to provide a learning experience. I wanted to build an API using Spring that would allow me to query different subsets of projects and blogs. I set about designing the table schema for MySQL, as well as the routes for accessing posts by tag, folder, and date. This process alone was taking more time than I had originally wanted to spend getting the backend running. I tried to write a proof of concept Spring API and host it with AWS. This proved to be more complex than I intented, so I searched for a more efficient alternative. One that would allow me to get to designing the actual look of the site much faster.
 
-Aenean ac aliquam ligula, vitae placerat mi. Duis vitae mi eu augue feugiat condimentum sed ut diam. Mauris a tempor augue. Etiam interdum quam vestibulum, iaculis magna a, pulvinar eros. Phasellus dictum metus ac ante venenatis, id porttitor felis laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus lectus velit, sodales quis odio sit amet, tristique venenatis nibh. Maecenas non lectus eu ante faucibus convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas lorem ipsum, tincidunt in tempor sit amet, ultricies at purus. Nulla leo ex, volutpat ut laoreet eu, efficitur nec nibh. Vivamus rutrum, neque a euismod blandit, tortor nunc efficitur lectus, eu consectetur tellus turpis sed velit. Mauris pretium, massa sed euismod pretium, risus ante sollicitudin sem, a auctor erat massa at eros.
+After Angular 2, I started looking at static site generators. Rather than developing and maintaining a full backend, I decided that a static site would still allow me to publish content, but without the added complexity of a database and network layer. Documents wouldn’t need to be rendered on the server or the client, rather they would just be embedded within the HTML to begin with. I initially looked at the Jekyll site generator. Jekyll is a very popular site generator written in Ruby which uses markdown to generate static HTML content. This was a very appealing option, and the framework I initially decided to use. However, I discovered GatsbyJS from an episode of the Syntax podcast and never looked back.
 
-Nullam placerat, arcu a varius fermentum, nibh tortor semper ex, non molestie velit velit quis turpis. Fusce mattis massa tellus, id auctor lorem malesuada in. Donec vulputate ullamcorper lectus sed fringilla. Maecenas commodo lorem eu sapien accumsan, non pharetra mi bibendum. Aliquam erat volutpat. Integer euismod augue quis arcu mattis, et laoreet eros lobortis. Praesent ut lorem molestie, tristique ex at, rutrum mi. Vestibulum malesuada consequat mauris, maximus finibus augue tempus nec. Ut convallis suscipit risus, tempus iaculis erat fringilla eu. Vivamus vitae dolor nulla. Integer hendrerit, turpis ac blandit varius, diam mi tincidunt lectus, a maximus eros nisi ut nisi. In vitae nunc ut lacus vehicula volutpat in quis justo. 
+GatsbyJS, like Jekyll uses markdown to generate HTML content. Unlike Jekyll, GatsbyJS uses React components for expressing document markup. Overall I found Gatsby to be more focused on customizing the look and feel of the site. I know Jekyll provides similar facilities, but I found it easier to get started with GatsbyJS. GatsbyJS also utilizes the up and coming GraphQL specification for “querying” markdown files. These “queries” can be executed with React components in order to “dynamically” generate new HTML pages. This was especially useful when implementing “tag” functionality. In a dynamic site, this would have taken the form of an API route which would have queried the database and returned posts which matched the queried tag. In GatsbyJS, every possible tag query generates its own index page. This would likely cause a problem for especially large blog websites with hundreds of tags, but is suitable for a personal blog such as this.
+
+GatsbyJS is by no means perfect, yet I feel like I learned a lot from the experience of developing this website. GraphQL seems to be an interesting, if unrecognized technology. Also, the particular Gatsby starter I utilized for this site came with BabelJS out of the box, so I was able to utilize several interesting ES6 features during development. Overall, I really like Gatsby and what it can do, and am interested to see where the project goes from here.
