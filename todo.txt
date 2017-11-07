@@ -1,5 +1,3 @@
-think about adding "image" metadata to posts, could use this for a time-line style header or something
-    images are handled really strangely in gatsby
 make "recent posts" cards that have a bit more information
 put pictures in their own "card" at the top of posts, about needs one
 find out why hamburger menu doesn't show on smaller screens
