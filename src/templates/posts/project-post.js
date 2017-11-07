@@ -28,7 +28,9 @@ export default function Template({data}) {
         <div><IconFactory icon="github" /> <Link to={post.frontmatter.subject_url}>{post.frontmatter.subject_url}</Link></div>
       </div>
       <div className="post-body">
-        <img className="img-responsive post-img" src={post.frontmatter.image_url} />
+        {
+          post.frontmatter.image_url ? <img className="img-responsive post-img" src={post.frontmatter.image_url} /> : ''
+        }
         <div dangerouslySetInnerHTML={{__html: post.html}}></div>
       </div>
       <div className="post-tags">{renderedTags}</div>

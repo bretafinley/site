@@ -5,7 +5,7 @@ subtitle: 'A Long Way From Home'
 post_type: 1
 post_date: 2017-08-28
 subject_url: ''
-image_url: 'https://raw.githubusercontent.com/d3/d3-logo/master/d3-black.png'
+image_url: ''
 category: 'Editorials'
 folder: 'Development'
 tags:
