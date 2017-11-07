@@ -8,7 +8,7 @@ import IconFactory from '../components/icon-factory';
 function About() {
   return (
     <div>
-      <h2 className="page-title">About Me</h2>
+      <h2 className="page-title card">About</h2>
       <div className="about-body">
         <p>
         Hi! My name is Bret Finley. I'm a software devloper living in beautiful Boise, Idaho.

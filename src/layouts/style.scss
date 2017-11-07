@@ -33,6 +33,13 @@ body {
     margin-top: 0px;
   }
 
+  img {
+    max-height: 200px;
+    max-width: 200px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
   a {
     font-size: $fontsz-big;
   }
@@ -162,6 +169,7 @@ ol.breadcrumb {
 
 .post-img {
   margin: auto;
+  max-height: 300px;
 }
 
 .post-tags {
@@ -179,6 +187,7 @@ ol.breadcrumb {
 .post-body {
   @extend .post;
   margin-bottom: 30px;
+  color: #000;
 }
 
 h2.page-title {
