@@ -4,6 +4,7 @@ title: 'COOP'
 subtitle: 'Counterfeit Object Oriented Programming'
 post_type: 2
 post_date: 2017-11-01
+published: true
 subject_url: 'https://github.com/bretafinley/coop'
 image_url: ''
 category: 'Security'

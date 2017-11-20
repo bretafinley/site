@@ -22,10 +22,9 @@ export default Blog;
 
 export const blogQuery = graphql`
 query BlogIndexQuery {
-  allMarkdownRemark(filter: {
-    frontmatter: {
-      post_type: {eq: 1}
-    }
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___post_date], order: DESC },
+    filter: { frontmatter: { post_type: {eq: 1} }
   }){
     edges {
       node {

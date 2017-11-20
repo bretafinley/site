@@ -40,7 +40,9 @@ export default IndexPage;
 
 export const postQuery = graphql`
 query IndexQurey {
-  allMarkdownRemark {
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___post_date], order: DESC }
+  ) {
     edges {
       node {
         id

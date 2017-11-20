@@ -22,10 +22,9 @@ export default Projects;
 
 export const projectQuery = graphql`
 query ProjectIndexQuery {
-  allMarkdownRemark(filter: {
-    frontmatter: {
-      post_type: {eq: 2}
-    }
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___post_date], order: DESC },
+    filter: { frontmatter: { post_type: {eq: 2} }
   }){
     edges {
       node {
