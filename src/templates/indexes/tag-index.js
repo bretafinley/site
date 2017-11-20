@@ -16,10 +16,9 @@ export default function Template(props) {
 
 export const postQuery = graphql`
 query TagIndex($tag: String!) {
-  allMarkdownRemark(filter: {
-    frontmatter: {
-      tags: {eq: $tag}
-    }
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___post_date], order: DESC },
+    filter: { frontmatter: { tags: { eq: $tag } }
   }){
       edges {
         node {

@@ -16,10 +16,9 @@ export default function Template(props) {
 
 export const postQuery = graphql`
 query CategoryIndex($category: String!) {
-  allMarkdownRemark(filter: {
-    frontmatter: {
-      category: {eq: $category}
-    }
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___post_date], order: DESC },
+    filter: { frontmatter: { category: {eq: $category} }
   }){
     edges {
       node {
