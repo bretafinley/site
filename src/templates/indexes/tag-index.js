@@ -29,8 +29,9 @@ query TagIndex($tag: String!) {
             subtitle
             path
             post_type
-            subject_url
             post_date
+            published
+            subject_url
             category
             folder
             tags

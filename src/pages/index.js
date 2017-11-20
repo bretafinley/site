@@ -41,7 +41,8 @@ export default IndexPage;
 export const postQuery = graphql`
 query IndexQurey {
   allMarkdownRemark(
-    sort: { fields: [frontmatter___post_date], order: DESC }
+    sort: { fields: [frontmatter___post_date], order: DESC },
+    filter: { frontmatter: { published: { eq: true } } }
   ) {
     edges {
       node {
@@ -52,8 +53,9 @@ query IndexQurey {
           subtitle
           path
           post_type
-          subject_url
           post_date
+          published
+          subject_url
           category
           folder
           tags

@@ -18,7 +18,11 @@ export const postQuery = graphql`
 query CategoryIndex($category: String!) {
   allMarkdownRemark(
     sort: { fields: [frontmatter___post_date], order: DESC },
-    filter: { frontmatter: { category: {eq: $category} }
+    filter: { 
+      frontmatter: { 
+        category: { eq: $category },
+        published: { eq: true }
+      }
   }){
     edges {
       node {
@@ -29,8 +33,9 @@ query CategoryIndex($category: String!) {
           subtitle
           path
           post_type
-          subject_url
           post_date
+          published
+          subject_url
           category
           folder
           tags

@@ -24,7 +24,11 @@ export const projectQuery = graphql`
 query ProjectIndexQuery {
   allMarkdownRemark(
     sort: { fields: [frontmatter___post_date], order: DESC },
-    filter: { frontmatter: { post_type: {eq: 2} }
+    filter: { 
+      frontmatter: { 
+        post_type: { eq: 2 },
+        published: { eq: true }
+      }
   }){
     edges {
       node {
@@ -35,8 +39,9 @@ query ProjectIndexQuery {
           subtitle
           path
           post_type
-          subject_url
           post_date
+          published
+          subject_url
           category
           folder
           tags

@@ -24,7 +24,11 @@ export const blogQuery = graphql`
 query BlogIndexQuery {
   allMarkdownRemark(
     sort: { fields: [frontmatter___post_date], order: DESC },
-    filter: { frontmatter: { post_type: {eq: 1} }
+    filter: { 
+      frontmatter: { 
+        post_type: { eq: 1 },
+        published: { eq: true }
+    }
   }){
     edges {
       node {
@@ -36,6 +40,7 @@ query BlogIndexQuery {
           path
           post_type
           post_date
+          published
           category
           folder
           tags
